@@ -1,6 +1,7 @@
 # Secret scan of the pull request's commits with gitleaks: the org-wide reusable
 # workflow of maestra-io/github-actions (official gitleaks/gitleaks-action, central
-# config). Check name: `gitleaks / gitleaks`. maestra-io/issues-maestra#1568
+# config and license). Check name: `gitleaks / gitleaks`. The previous repo-own
+# workflow needed MINDBOX_GITLEAKS_LICENSE, which this org does not have.
 name: gitleaks
 
 on: pull_request

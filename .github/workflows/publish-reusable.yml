@@ -16,17 +16,17 @@ jobs:
       newVersion: ${{ fromJson(steps.package.outputs.content).target-version }}
     steps:
     - name: Checkout
-      uses: actions/checkout@v4
+      uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4.4.0
       with:
         ref: ${{ inputs.branch }}
     - name: Read package.json
       id: package
-      uses: juliangruber/read-file-action@v1
+      uses: juliangruber/read-file-action@271ff311a4947af354c6abcd696a306553b9ec18 # v1.1.8
       with:
         path: ./package.json
     - name: Version check
       if: ${{ fromJson(steps.package.outputs.content).version == fromJson(steps.package.outputs.content).target-version }}
-      uses: actions/github-script@v6
+      uses: actions/github-script@d7906e4ad0b1822421a7e6a35d5ca353c962f410 # v6.4.1
       with:
         script: |
           core.setFailed('Packet version and target version are equivalent!')
@@ -37,11 +37,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout
-      uses: actions/checkout@v4
+      uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4.4.0
       with:
         ref: ${{ inputs.branch }}
     - name: Setup node JS
-      uses: actions/setup-node@v2
+      uses: actions/setup-node@7c12f8017d5436eb855f1ed4399f037a36fbd9e8 # v2.5.2
       with:
         node-version: 14
         registry-url: https://registry.npmjs.org
@@ -57,11 +57,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout
-      uses: actions/checkout@v4
+      uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4.4.0
       with:
         ref: ${{ inputs.branch }}
     - name: Setup node JS
-      uses: actions/setup-node@v2
+      uses: actions/setup-node@7c12f8017d5436eb855f1ed4399f037a36fbd9e8 # v2.5.2
       with:
         node-version: 14
         registry-url: https://registry.npmjs.org
@@ -100,7 +100,7 @@ jobs:
       GITHUB_TOKEN: ${{ secrets.PAT_FOR_TRIGGERING_BRANCH_PROTECTION }}
     steps:
     - name: Checkout develop branch
-      uses: actions/checkout@v4
+      uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4.4.0
       with:
         ref: develop
     - name: Create Pull Request
