@@ -156,5 +156,8 @@
         }
       ]
     ]
+  },
+  "resolutions": {
+    "@types/node": "^20.19.0"
   }
 }
