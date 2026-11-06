@@ -1,0 +1,14 @@
+{
+  "pins" : [
+    {
+      "identity" : "ios-sdk",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/maestra-io/ios-sdk",
+      "state" : {
+        "revision" : "2abea8d57a51ba9888d6d26cb6eb931ef3a933df",
+        "version" : "2.16.0"
+      }
+    }
+  ],
+  "version" : 2
+}
