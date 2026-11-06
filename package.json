@@ -144,5 +144,8 @@
         }
       ]
     ]
+  },
+  "resolutions": {
+    "shell-quote": "^1.12.0"
   }
 }
