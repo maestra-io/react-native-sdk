@@ -30,7 +30,8 @@ const render = (element: React.ReactElement<any>): ReactTestRenderer => {
 
 const slotHeight = (renderer: ReactTestRenderer) => {
   const frame = renderer.root.findAllByType(View as any)[0]
-  return StyleSheet.flatten(frame.props.style).height
+  // With Platform.OS mocked to 'web', RN Animated renders the frame style as { 0: inputStyle, 1: animatedValues }.
+  return StyleSheet.flatten(Object.values(frame.props.style) as any).height
 }
 
 describe('MindboxEmbeddedBlock on a platform without the native block', () => {

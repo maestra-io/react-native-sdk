@@ -395,7 +395,7 @@ describe('MindboxEmbeddedBlock', () => {
     const hiddenBlock = () => <MindboxEmbeddedBlock placeSystemName="stories" height={104} loadingStrategy="hidden" />
 
     beforeEach(() => {
-      jest.useFakeTimers('modern')
+      jest.useFakeTimers()
     })
 
     afterEach(() => {
